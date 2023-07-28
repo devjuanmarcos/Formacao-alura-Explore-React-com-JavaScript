@@ -2,6 +2,7 @@ import "./Formulario.css";
 import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 import Botao from "../Botao";
+import { useState } from "react";
 
 const Formulario = () => {
   const times = [
@@ -13,9 +14,14 @@ const Formulario = () => {
     "Mobile",
   ];
 
+  const [nome, setNome] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [imagem, setImagem] = useState("");
+  const [time, setTime] = useState("");
+
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    console.log("Form foi submetido");
+    console.log("Form foi submetido => ", nome, cargo, imagem, time);
   };
 
   return (
@@ -27,17 +33,29 @@ const Formulario = () => {
           obrigatorio={true}
           label="nome"
           placeholder="Digite seu nome"
+          value={nome}
+          aoAlterado={(valor) => setNome(valor)}
         />
         <CampoTexto
           obrigatorio={true}
           label="Cargo"
           placeholder="Digite seu cargo"
+          value={cargo}
+          aoAlterado={(valor) => setCargo(valor)}
         />
         <CampoTexto
           label="Imagem"
           placeholder="Digite o endereço da sua imagem"
+          value={imagem}
+          aoAlterado={(valor) => setImagem(valor)}
         />
-        <ListaSuspensa obrigatorio={true} label="Time" itens={times} />
+        <ListaSuspensa
+          obrigatorio={true}
+          label="Time"
+          itens={times}
+          value={time}
+          aoAlterado={(valor) => setTime(valor)}
+        />
         <Botao>Criar Card</Botao>
       </form>
     </section>

@@ -14,4 +14,4 @@ const ListaSuspensa = (props) => {
     </div>
   );
 };
-export default ListaSuspensas;
+export default ListaSuspensa;

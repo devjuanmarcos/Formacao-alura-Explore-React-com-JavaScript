@@ -27,7 +27,7 @@ const Formulario = (props) => {
 
         <CampoTexto
           obrigatorio={true}
-          label="nome"
+          label="Nome"
           placeholder="Digite seu nome"
           value={nome}
           aoAlterado={(valor) => setNome(valor)}

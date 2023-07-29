@@ -10,7 +10,9 @@ const Formulario = (props) => {
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
 
+  // prettier-ignore
   const aoSalvar = (evento) => {
+
     evento.preventDefault();
     props.aoColaboradorCadastrado({
       nome,
@@ -18,6 +20,11 @@ const Formulario = (props) => {
       imagem,
       time,
     });
+
+   setNome('')
+   setCargo('')
+   setImagem('')
+   setTime('')
   };
 
   return (
@@ -29,27 +36,27 @@ const Formulario = (props) => {
           obrigatorio={true}
           label="Nome"
           placeholder="Digite seu nome"
-          value={nome}
+          valor={nome}
           aoAlterado={(valor) => setNome(valor)}
         />
         <CampoTexto
           obrigatorio={true}
           label="Cargo"
           placeholder="Digite seu cargo"
-          value={cargo}
+          valor={cargo}
           aoAlterado={(valor) => setCargo(valor)}
         />
         <CampoTexto
           label="Imagem"
           placeholder="Digite o endereço da sua imagem"
-          value={imagem}
+          valor={imagem}
           aoAlterado={(valor) => setImagem(valor)}
         />
         <ListaSuspensa
           obrigatorio={true}
           label="Time"
           itens={props.times}
-          value={time}
+          valor={time}
           aoAlterado={(valor) => setTime(valor)}
         />
         <Botao>Criar Card</Botao>

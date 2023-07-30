@@ -28,7 +28,10 @@ const Formulario = (props) => {
   };
 
   return (
-    <section className="formulario">
+    <section
+      className="formulario"
+      style={{ backgroundColor: (255, 0, 0, 0.5) }}
+    >
       <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
 
@@ -59,7 +62,9 @@ const Formulario = (props) => {
           valor={time}
           aoAlterado={(valor) => setTime(valor)}
         />
-        <Botao>Criar Card</Botao>
+        <div className="botaos">
+          <Botao>Criar Card</Botao>
+        </div>
       </form>
     </section>
   );

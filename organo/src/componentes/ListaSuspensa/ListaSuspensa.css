@@ -2,10 +2,12 @@
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
+    
 }
 
-.lista-suspensa select {
-    background-color: rgba(223, 207, 207, 0.5);
+.lista-suspensa Box {
+    background-color: rgba(22, 0, 0, 0.5);
+    color: aliceblue;
     box-shadow: 10px 10px 30px rgba(0,0,0, 0.06);
     width: 100%;
     border: none;
@@ -14,3 +16,4 @@
     box-sizing: border-box;
     border-radius: 15px;
 }
+

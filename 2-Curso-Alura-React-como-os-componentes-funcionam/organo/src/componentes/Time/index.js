@@ -1,5 +1,6 @@
 import Colaborador from "../Colaborador";
 import "./time.css";
+import hexToRgba from "hex-to-rgba";
 
 const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
   return (
@@ -8,23 +9,23 @@ const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
         className="time"
         style={{
           backgroundImage: "url(/imagens/fundo.png)",
-          backgroundColor: time.corPrimaria,
+          backgroundColor: hexToRgba(time.cor, "0.6"),
         }}
       >
         <input
-          onChange={(evento) => mudarCor(evento.target.value, time.nome)} // o evento vai querer um target (informação inicial quando iniciou a solicitação do comando. Value é o valor que o input recebeu)
-          value={time.corSecundaria}
+          onChange={(evento) => mudarCor(evento.target.value, time.id)} // o evento vai querer uma informação para ponto de partida, logo passamos o target (informação inicial quando iniciou a solicitação do comando.) Value é o valor que o input recebeu)
+          value={time.cor}
           type="color"
           className="input-cor"
         />
-        <h3 style={{ borderColor: time.corSecundaria }}>{time.nome}</h3>
+        <h3 style={{ borderColor: time.cor }}>{time.nome}</h3>
         <div className="colaboradores">
           {colaboradores.map((colaborador, indice) => {
             return (
               <Colaborador
                 key={indice}
                 colaborador={colaborador}
-                corDeFundo={time.corSecundaria}
+                corDeFundo={time.cor}
                 aoDeletar={aoDeletar}
               />
             );

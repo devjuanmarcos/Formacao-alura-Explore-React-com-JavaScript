@@ -1,0 +1,32 @@
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 80px 80px;
+    color: rgb(255, 255, 255, 2);
+
+}
+
+.formulario form{
+  max-width: 80%;
+  background: url('https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-nebulosa-ultra-detalhado-8_1562-753.jpg?w=1380&t=st=1690678349~exp=1690678949~hmac=5812179bcefc788b0a9ee379c7738378f87c13e51ff034738f21ea860ae4c1bb');
+  background-color: #fff ;
+  background-size: 200%;
+  border-radius: 20px;
+  padding: 36px 64px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.562);
+}
+ .formulario form:hover{
+    opacity: 30;
+ }
+
+ .formulario form h2{
+    margin-bottom: 60px;
+
+ }
+ .botaos{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+ }
+ 

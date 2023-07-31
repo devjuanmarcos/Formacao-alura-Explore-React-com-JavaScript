@@ -1,5 +1,5 @@
 import Colaborador from "../Colaborador";
-import "./time.css";
+import "./Time.css";
 
 // prettier-ignore
 const Time = ({ time, colaboradores, aoDeletar }) => {

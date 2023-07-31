@@ -240,17 +240,16 @@ function App() {
   ];
 
   const [colaboradores, setColaboradores] = useState(inicial);
+
   // prettier-ignore
   function deletarColaborador(id) {
-    setColaboradores(
-      colaboradores.filter(colaborador => colaborador.id !== id)
-    );
+    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id));
   }
 
-  function mudarCorDoTime(cor, id) {
+  function mudarCor(cor, id) {
     setTimes(
       times.map((time) => {
-        if (time.id === id()) {
+        if (time.id === id) {
           time.cor = cor;
         }
         return time;
@@ -258,10 +257,9 @@ function App() {
     );
   }
 
-  function cadastrarTime(novoTime) {
-    setTimes([...times, { ...novoTime, id: uuidv4() }]);
+  function cadastrarTime({ nome, cor }) {
+    setTimes([...times, { nome, cor, id: uuidv4() }]);
   }
-
   return (
     <div>
       <Banner />
@@ -276,7 +274,7 @@ function App() {
         <h1>Minha organização</h1>
         {times.map((time, indice) => (
           <Time
-            mudarCor={mudarCorDoTime}
+            mudarCor={mudarCor}
             key={indice}
             time={time}
             colaboradores={colaboradores.filter(

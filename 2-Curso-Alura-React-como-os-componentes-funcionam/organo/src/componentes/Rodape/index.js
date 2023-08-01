@@ -26,7 +26,7 @@ const Rodape = () => {
         <img src="/imagens/logo.png" alt="" />
       </section>
       <section>
-        <p>Desenvolvido por Alura.</p>
+        <p>KIKITO PROGRAMAS</p>
       </section>
     </footer>
   );

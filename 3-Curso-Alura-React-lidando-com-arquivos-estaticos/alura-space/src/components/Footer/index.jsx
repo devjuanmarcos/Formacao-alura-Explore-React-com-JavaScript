@@ -47,7 +47,7 @@ export default function Footer() {
           <img
             src={github}
             alt='github'
-            className={styles.github}
+            fil
           />
         </a>
       </div>

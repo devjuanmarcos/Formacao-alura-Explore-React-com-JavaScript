@@ -1,9 +1,11 @@
-import Header from "../../components/Header";
-import Menu from "../../components/Menu";
 import styles from "./Home.module.scss";
-import Banner from "../../components/Banner";
-import Footer from "../../components/Footer";
-import Galery from "../../components/Galery";
+
+import Header from "components/Header";
+import Menu from "components/Menu";
+import Banner from "components/Banner";
+import Footer from "components/Footer";
+import Galery from "components/Galery";
+import Popular from "components/Popular";
 
 export default function Home() {
   return (
@@ -14,10 +16,11 @@ export default function Home() {
           <Menu />
           <Banner />
         </section>
+        <div className={styles.galery}>
+          <Galery />
+          <Popular />
+        </div>
       </main>
-      <div className={styles.galery}>
-        <Galery />
-      </div>
       <Footer />
     </>
   );

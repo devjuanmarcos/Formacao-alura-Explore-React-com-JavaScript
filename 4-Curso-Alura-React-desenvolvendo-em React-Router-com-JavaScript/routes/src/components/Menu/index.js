@@ -7,8 +7,8 @@ export default function Menu() {
     <header>
       {/* prettier-ignore */}
       <nav className={stylesMenu.navigation}>
-        <MenuLink to={"/"}>Início</MenuLink>
-        <MenuLink to={"/about"} >Sobre mim</MenuLink>
+        <MenuLink to={"/"}>Home</MenuLink>
+        <MenuLink to={"/about"} >About me</MenuLink>
 
       </nav>
     </header>

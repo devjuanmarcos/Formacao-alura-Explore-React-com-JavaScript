@@ -1,3 +1,4 @@
+import Footer from "components/Footer";
 import Menu from "./components/Menu";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -25,6 +26,8 @@ export default function AppRoutes() {
             element={<div>Página não encontrada</div>}
           />
         </Routes>
+
+        <Footer />
       </BrowserRouter>
     </>
   );

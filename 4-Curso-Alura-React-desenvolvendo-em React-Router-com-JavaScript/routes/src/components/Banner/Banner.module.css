@@ -109,3 +109,33 @@
     transform: translate(-1.5rem, 0px);
   }
 }
+@media (min-width: 1440px) {
+  .banner {
+    padding: 3rem 7.5rem 6.25rem;
+  }
+
+  .title {
+    margin-top: 4.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .paragraph {
+    margin-bottom: 2rem;
+  }
+
+  .images {
+    height: 1em;
+  }
+
+  .images > .myPhoto {
+    width: 13em;
+    bottom: -18em;
+    right: 4em;
+  }
+
+  .images > .coloredCircle {
+    right: 7vw;
+    width: 20em;
+    bottom: auto;
+  }
+}

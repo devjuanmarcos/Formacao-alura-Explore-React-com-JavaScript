@@ -13,9 +13,10 @@
   --fonte-principal: "Raleway", sans-serif;
   --fonte-secundaria: "Playfair Display", sans-serif;
   background-image: linear-gradient(
-    108.5deg,
-    rgba(117, 168, 175, 0.5) 21.7%,
-    rgba(46, 1, 90, 0.5) 71%
+    64deg,
+    #00041c 0%,
+    #4c0041 54%,
+    #00897b 100%
   );
   font-family: var(--fonte-principal);
 }

@@ -1,12 +1,15 @@
 .banner {
   padding: 3rem 7.5rem 6.25rem;
-  background: rgb(2, 0, 36);
+  background: -webkit-linear-gradient(
+    to right,
+    #c33764,
+    #1d2671
+  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    90deg,
-    rgba(56, 0, 25, 1) 0%,
-    rgba(62, 41, 135, 1) 50%,
-    rgba(148, 187, 233, 1) 100%
-  );
+    to right,
+    #200122,
+    #1d2671
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: var(--branco);
   display: grid;
   grid-template-columns: 1fr 1fr;

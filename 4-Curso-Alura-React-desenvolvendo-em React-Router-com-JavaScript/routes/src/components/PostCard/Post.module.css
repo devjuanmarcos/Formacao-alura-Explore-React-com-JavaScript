@@ -30,15 +30,29 @@
   padding: 0.75rem 1.5rem;
   font-size: 1.125rem;
   line-height: 1.125rem;
-  background-color: var(--azul-medio);
+  background-image: linear-gradient(
+    64deg,
+    #00041c 0%,
+    #4c0041 54%,
+    #00897b 100%
+  );
   color: var(--branco);
-  border: 3px solid var(--azul-medio);
+  border: none;
   cursor: pointer;
   transition: 0.2s;
+  margin: 10px;
 }
 
 .readButton:hover {
-  border: 3px solid var(--azul-escuro);
+  text-align: center;
+  transition: 0.5s;
+  background-size: 100% auto;
+  color: #fff;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+}
+
+.readButton:hover {
 }
 
 @media (max-width: 1100px) {

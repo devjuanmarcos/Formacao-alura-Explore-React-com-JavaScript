@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Post from "pages/Post";
 import PadraoPage from "components/PadraoPage";
+import NotFound from "pages/NotFound";
 
 console.log(window.location);
 
@@ -27,14 +28,14 @@ export default function AppRoutes() {
               path='about'
               element={<About />}
             />
-            <Route
-              path='post'
-              element={<Post />}
-            />
           </Route>
           <Route
+            path='posts/:id/*'
+            element={<Post />}
+          />
+          <Route
             path='*'
-            element={<div>Página não encontrada</div>}
+            element={<NotFound />}
           />
         </Routes>
 

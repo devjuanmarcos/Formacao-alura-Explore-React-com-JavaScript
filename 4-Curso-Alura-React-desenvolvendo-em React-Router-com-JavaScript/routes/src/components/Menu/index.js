@@ -10,6 +10,7 @@ export default function Menu() {
         <MenuLink to={"/"}>Home</MenuLink>
         <MenuLink to={"/about"} >About me</MenuLink>
 
+
       </nav>
     </header>
   );

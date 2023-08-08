@@ -4,7 +4,6 @@ const titleGray = '#464646';
 export const Container = styled.main`
   min-height: 100vh;
   padding: 0 20px;
-
   @media(min-width: 768px) {
     margin: 0 auto;
     width: 50%;

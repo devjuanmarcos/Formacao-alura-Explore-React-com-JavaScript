@@ -1,63 +1,40 @@
-import { Button } from '@material-ui/core';
-import {
-  Container,
-  Titulo,
-  InputContainer
-} from './styles';
-import { useHistory } from 'react-router-dom';
-import { useContext } from 'react';
-import { UsuarioContext } from 'common/contexts/Usuario';
-import {
-  Input,
-  InputLabel,
-  InputAdornment 
-} from '@material-ui/core';
+import { Button } from "@material-ui/core";
+import { Container, Titulo, InputContainer } from "./styles";
+import { Input, InputLabel, InputAdornment } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
-function Login() {
-  const history = useHistory();
-  const { nome, setNome, saldo, setSaldo } = useContext(UsuarioContext);
-  
+function Login({ nome, setNome, saldo, setSaldo }) {
+  const navigate = useNavigate();
 
   return (
     <Container>
-      <Titulo>
-        Insira o seu nome
-      </Titulo>
+      <Titulo>Insira o seu nome</Titulo>
       <InputContainer>
-        <InputLabel>
-          Nome
-        </InputLabel>
+        <InputLabel>Nome</InputLabel>
         <Input
-          type="text"
           value={nome}
           onChange={(event) => setNome(event.target.value)}
+          type='text'
         />
       </InputContainer>
       <InputContainer>
-        <InputLabel>
-          Saldo
-        </InputLabel>
+        <InputLabel>Saldo</InputLabel>
         <Input
-        value={saldo}
-        type="number"
-        onChange={event => setSaldo(Number(event.target.value))}
-        startAdornment={
-          <InputAdornment position="start">
-            R$
-          </InputAdornment>
-        }
-      />
+          value={saldo}
+          onChange={(event) => setSaldo(event.target.value)}
+          type='number'
+          startAdornment={<InputAdornment position='start'>R$</InputAdornment>}
+        />
       </InputContainer>
       <Button
-        variant="contained"
-        color="primary"
-        disabled={nome.length < 4}
-        onClick={() => history.push('/feira')}
+        onClick={() => navigate("/feira")}
+        variant='contained'
+        color='primary'
       >
         Avançar
       </Button>
     </Container>
-  )
-};
+  );
+}
 
 export default Login;
